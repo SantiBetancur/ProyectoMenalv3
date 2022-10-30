@@ -1,0 +1,295 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body, html{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  background:
+  radial-gradient(circle, transparent 20%, rgb(70, 91, 108) 20%, rgb(70, 91, 108) 80%, transparent 100%, transparent),
+  radial-gradient(circle, transparent 20%,  rgb(70, 91, 108)0%, rgb(70, 91, 108)80%, transparent 1%, transparent) 50px 50px,
+  linear-gradient(#ffff 8px, transparent 2px) 0 -4px,
+  linear-gradient(90deg, #fff 8px, transparent 1px) -4px 0;
+  background-color: rgb(70, 91, 108);
+  background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+.min-header{
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  width: 100%;
+  min-height: 100px;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 40px;
+  color: rgb(95, 79, 201);
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.918);
+}
+.min-header img{
+  height: 120px;
+  position: relative;
+  top: 15px;
+  right: 35%;
+}
+.min-header-2{
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  width: 100%;
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  background-color: white;
+}
+.min-header-2 img{
+  height: 120px;
+  position: relative;
+  top: 15px;
+ 
+}
+.p{
+  width: 500px;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(95, 79, 201);
+  margin-right: 300px;
+  margin-left: 400px;
+}
+
+
+
+
+
+.container{
+  max-width: 45%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 120px;
+}
+.section{
+  font-size: 30px;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 10px 0;
+  background-color: rgba(52, 73, 90, 0.95);
+  margin-bottom: 50px;
+}
+
+label{
+  display: block;
+  padding: 7px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1px;
+  margin-bottom: 3px;
+  text-align: left;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  background-color: rgb(71, 104, 133);
+  margin: 0px 0 40px 0;
+  transition: all ease .5s;
+}
+
+
+.button{
+  width: 650px;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 100px;
+  padding: 10px;
+  background-color: rgb(95, 79, 201);
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  transition: all ease .5s;
+}
+.button:hover{
+  background: white;
+  color: rgb(55, 55, 55);
+  transition: all ease .5s;
+}
+h2{
+  text-align: center;
+}
+h3{
+  background-color: transparent;
+  margin: 20px 0 20px 0;
+  color: white;
+}
+
+
+
+.login-box {
+  width: 640px;
+  height: 720px;
+  background: rgba(52, 73, 90, 0.937);
+  border: solid 1px white;
+  background-image: url('./img/logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.login-box .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.login-box h1 {
+  position: absolute;
+  top: 40px;
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.login-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+  font-size: 35px;
+  background: transparent;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.login-box input[type="text"], .login-box input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.login-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: rgb(95, 79, 201);
+  color: #fff;
+  font-size: 20px;
+  border-radius: 20px;
+  transition: all ease .5s;
+}
+
+.login-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  color: rgb(40, 40, 40);
+  transition: all ease .5s;
+}
+
+.login-box a {
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 20px;
+  color: darkgrey;
+  transition: all ease .5s;
+}
+
+.login-box a:hover {
+  transition: all ease .5s;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+.container-form {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  transition:  all .5s ease-out;
+}
+
+.welcome-back {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.message {
+  padding: 1rem;
+}
+
+.message h2 {
+  font-size: 1.7rem;
+  padding: 1rem 0;
+}
+
+.message-button {
+  padding: 1rem;
+  font-weight: 400;
+  background-color: rgb(95, 79, 201);
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .9rem;
+  margin-top: 2rem;
+  transition: all .3s ease-in;
+  color: #fff;
+}
+
+.message-button:hover {
+  background-color: rgb(95, 79, 201);
+}
+
+.formulario {
+  width: 400px;
+  padding: 1rem;
+  margin: 2rem;
+  background-color: rgb(51, 51, 51, 0.602);
+  text-align: center;
+}
+
+
