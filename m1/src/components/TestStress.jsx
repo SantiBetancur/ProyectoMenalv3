@@ -1,5 +1,6 @@
 import React from 'react'
 import { Buttons } from './Buttons'
+import { Link } from 'react-router-dom'
 
 export const TestStress = () => {
   return (
@@ -8,7 +9,6 @@ export const TestStress = () => {
         <img src={require(`../img/logo.png`)}/>
         <p className='p'>TEST DE ESTRES</p>
         <Buttons color='button-1' text='INICIO' route = '/'/>
-        <Buttons color='button-1' text='SIGUIENTE TEST' route = '/Test03/'/>
      </section>
     <div className="container">
     
@@ -202,8 +202,9 @@ export const TestStress = () => {
           <input type="radio" value="5" id="p9.5" name='option'/> Muy a menudo
       </label>
     </section>
-
-    <button onClick='' className='button'>Enviar</button>
+    <Link to='/Results/'>
+                <button type='submit'  className='button'>Enviar</button>
+    </Link>
   </div>
     </div>
     

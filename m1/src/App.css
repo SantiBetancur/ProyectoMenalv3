@@ -13,7 +13,10 @@ body, html{
   linear-gradient(90deg, #fff 8px, transparent 1px) -4px 0;
   background-color: rgb(70, 91, 108);
   background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+  background-attachment: fixed;
+
 }
+/*Estilos de la página principal*/
 
 .App{
   display: flex;
@@ -31,16 +34,28 @@ body, html{
   align-items: center;
   text-align: center;
   display: flex;
-  font-size: 40px;
-  color: rgb(95, 79, 201);
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.918);
+  background-color: rgb(255, 255, 255);
+}
+.name-user{
+  width:50% ;
+  background-color: transparent;
+  margin-right: 20%;
+  font-size: 25px;
+  display: flex;
+  color: rgb(75, 75, 75);
+  font-weight: 100;
+
+}
+.name-user span{
+  margin-left: 20px;
+  font-weight: bold;
+  color: rgb(95, 79, 201);
 }
 .min-header img{
   height: 120px;
-  position: relative;
-  top: 15px;
-  right: 35%;
+  display: block;
+  margin-top: 10px;
 }
 .min-header-2{
   position: fixed;
@@ -74,21 +89,31 @@ body, html{
 
 
 
-
+/*Estilos de los Test*/
 
 .container{
-  max-width: 45%;
-  margin: auto;
+  width: 100%;
+  margin-left: 450px;
   padding: 20px;
   margin-top: 120px;
+  justify-content: center;
+  align-items: center;
 }
 .section{
-  font-size: 30px;
-  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 100;
+  border-radius: 20px;
+  background: rgba(52, 73, 90, 0.937);
+  border: solid 1px white;
   padding: 30px;
   margin: 10px 0;
-  background-color: rgba(52, 73, 90, 0.95);
   margin-bottom: 50px;
+  width: 45%;
+}
+.section h3{
+  font-size: 35px;
+  font-weight: 100;
+  margin-bottom: 60px;
 }
 
 label{
@@ -110,9 +135,9 @@ label{
 
 .button{
   width: 650px;
-  display: flex;
   justify-content: center;
-  margin: 0 0 0 100px;
+  margin-left:50px ;
+  margin-bottom: 50px;
   padding: 10px;
   background-color: rgb(95, 79, 201);
   font-size: 35px;
@@ -125,7 +150,7 @@ label{
 }
 .button:hover{
   background: white;
-  color: rgb(55, 55, 55);
+  color: rgb(75, 75, 75);
   transition: all ease .5s;
 }
 h2{
@@ -138,10 +163,11 @@ h3{
 }
 
 
+/*Estilos del Loggin*/
 
 .login-box {
   width: 640px;
-  height: 720px;
+  height: 500px;
   background: rgba(52, 73, 90, 0.937);
   border: solid 1px white;
   background-image: url('./img/logo.png');
@@ -158,6 +184,7 @@ h3{
   padding: 70px 30px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   display: flex;
 }
 
@@ -170,22 +197,14 @@ h3{
   left: calc(50% - 50px);
 }
 
-.login-box h1 {
-  position: absolute;
-  top: 40px;
-  margin: 0;
-  padding: 0 0 20px;
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: 30px;
-}
+
 
 .login-box label {
   margin: 0;
   padding: 0;
-  font-weight: bold;
+  font-weight: 100;
   display: block;
-  font-size: 35px;
+  font-size: 20px;
   background: transparent;
 }
 
@@ -201,7 +220,7 @@ h3{
   outline: none;
   height: 40px;
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 15px;
 }
 
@@ -225,7 +244,7 @@ h3{
 
 .login-box a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 18px;
   line-height: 20px;
   color: darkgrey;
   transition: all ease .5s;
@@ -241,7 +260,7 @@ h3{
 
 
 
-
+/*Estilos del Regístro*/
 
 .container-form {
   width: 90%;
@@ -292,4 +311,84 @@ h3{
   text-align: center;
 }
 
+/*Estilos de la página de resultados*/
 
+.sec-result{
+  width: 700px;
+  height: 700px;
+  background: rgba(52, 73, 90, 0.937);
+  border: solid 1px white;
+  border-radius: 20px;
+  color: #fff;
+  top: 55%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.sec-result p{
+  width: 93%;
+  min-height: 100px ;
+  background-color: rgb(95, 79, 201);
+  border-radius: 20px;
+  margin-bottom: 50px ;
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+.sec-result p span{
+  min-width: 100px;
+  background-color: transparent;
+  color: white;
+  font-size: 120px;
+  font-weight: bold;
+}
+.recomend{
+  width: 93%;
+  min-height: 100px;
+  background-color: white;
+  margin-top:20px ;
+  padding: 20px;
+  border-radius: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  color: rgb(65, 65, 65);
+}
+
+.nt-text{
+  width: 550px;
+  height: 300px;
+  background: rgb(52, 73, 90);
+  border: solid 1px rgb(244, 116, 116);
+  background-image: url('./img/logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+
+}

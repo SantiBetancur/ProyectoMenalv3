@@ -5,6 +5,24 @@ import { Featured } from './components/Featured';
 import { Headers } from './components/Headers';
 import React from 'react';
 
+  var route1;
+  var route2;
+  var route3;
+  var route4 = '/NotFound/';
+
+  var access_db = localStorage.getItem("access");
+
+  console.log(access_db);
+  if(access_db === "t"){
+   route1 = '/Test01/'
+   route2 = '/Test02/'
+   route3 = '/Test03/'
+  }else{
+    route1 = route4
+    route2 = route4
+    route3 = route4
+  }
+
 class App extends React.Component{
     constructor(props){
         super(props);
@@ -12,13 +30,15 @@ class App extends React.Component{
     }
     render() {
         return (
+        
         <div className="App">
+        
         <section className='min-header'>
         <img src={require(`./img/logo.png`)}/>
+        <p className='name-user'>Bienvenid@<span>{localStorage.getItem('input_register_user')}</span></p>
         <Buttons color='button-1' text='INICIO' route = '/'/>
         <Buttons color='button-1' text='REGISTRARSE' route = '/Register/'/>
-        <Buttons color='button-2' text='RESULTADOS' route = '/Resultados/'/>
-        <Buttons color='button-2' text='MI PERFIL' route = '/Login/'/>
+        <Buttons color='button-2' text='INGRESO' route = '/Login/'/>
      </section>
    
    
@@ -30,9 +50,9 @@ class App extends React.Component{
     img02 = {require(`./img/enf2.jpg`)}
     img03 = {require(`./img/enf3.jpg`)}
     img04 = {require(`./img/enf2.jpg`)}
-    link1 = '/Test01/'
-    link2 = '/Test02/'
-    link3 = '/Test03/'
+    link1 = {route1}
+    link2 = {route2}
+    link3 = {route3}
     testName1 = 'TEST DE ANSIEDAD'
     testName2 = 'TEST DE ESTRES'
     testName3 = 'TEST DE DEPRESIÓN'
