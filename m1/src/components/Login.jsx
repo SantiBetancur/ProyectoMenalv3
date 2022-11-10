@@ -28,6 +28,7 @@ export function Login(){
     //Input del Loggin
     input_user = data.get("username");
     input_pass = data.get("password");
+    localStorage.setItem('name', input_user)
       
     //Leyendo LocalStorage
     user_DB = localStorage.getItem("input_register_user");

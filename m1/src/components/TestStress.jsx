@@ -3,209 +3,231 @@ import { Buttons } from './Buttons'
 import { Link } from 'react-router-dom'
 
 export const TestStress = () => {
-  return (
-    <div>
-     <section className='min-header-2'>
-        <img src={require(`../img/logo.png`)}/>
-        <p className='p'>TEST DE ESTRES</p>
-        <Buttons color='button-1' text='INICIO' route = '/'/>
-     </section>
-    <div className="container">
     
-    <section className='section' id="p0">
-      <h3> ¿Con qué frecuencia te has sentido afectado por un hecho o situación inesperada?</h3>
-      <label>
-          <input type="radio" value="1" id="p0.1" name="option"/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p0.2" name="option"/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p0.3" name="option"/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p0.4" name="option"/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p0.5" name="option"/> Muy a menudo
-      </label>
-    </section>
-    {/* los saltos de linea son la division estre cada pregunta  */}
+    function formhandleTest(event){
+        event.preventDefault();
+        const data = new FormData(event.target);
+        localStorage.setItem("optp0_test2",data.get("optionp0"));
+        localStorage.setItem("optp1_test2",data.get("optionp1"));
+        localStorage.setItem("optp3_test2",data.get("optionp3"));
+        localStorage.setItem("optp3_test2",data.get("optionp3"));
+        localStorage.setItem("optp4_test2",data.get("optionp4"));
+        localStorage.setItem("optp5_test2",data.get("optionp5"));
+        localStorage.setItem("optp6_test2",data.get("optionp6"));
+        localStorage.setItem("optp7_test2",data.get("optionp7"));
+        localStorage.setItem("optp8_test2",data.get("optionp8"));
+        localStorage.setItem("optp9_test2",data.get("optionp9")); 
+        
+    }
+
+    const redirect = () => {
+        window.location.href = '/ResultadosTest02/'
+    }
+        return (
+
+            <div>
+            <section className='min-header-2'>
+            <img src={require(`../img/logo.png`)}/>
+            <p className='p'>TEST DE ESTRES</p>
+            <Buttons color='button-1' text='INICIO' route = '/'/>
+            </section>
+
+        <form  onSubmit={formhandleTest} className="container">
     
-    <section className='section' id="p1">
-      <h3>¿Con qué frecuencia te has sentido incapaz de controlar las cosas importantes en tu vida?</h3>
-      <label>
-          <input type="radio" value="1" id="p1.1" name="option"/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p1.2" name="option"/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p1.3" name="option"/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p1.4" name="option"/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p1.5" name="option"/> Muy a menudo
-      </label>
-    </section>
+                <section className='section' id="p0">
+                    <h3> ¿Con qué frecuencia te has sentido afectado por un hecho o situación inesperada?</h3>
+                        <label>
+                            <input type="radio" value="Nunca" id="p0.1" name="optionp0"/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p0.2" name="optionp0"/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p0.3" name="optionp0"/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p0.4" name="optionp0"/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="Muyamenudo" id="p0.5" name="optionp0"/> Muy a menudo
+                        </label>
+                </section>
+    {/* los saltos de linea son la division entre cada pregunta  */}
+    
+                <section className='section' id="p1">
+                    <h3>¿Con qué frecuencia te has sentido incapaz de controlar las cosas importantes en tu vida?</h3>
+                        <label>
+                            <input type="radio" value="Nunca" id="pNunca.1" name="optionp1"/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p1.2" name="optionp1"/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p1.3" name="optionp1"/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p1.4" name="optionp1"/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="Muyamenudo" id="p1.5" name="optionp1"/> Muy a menudo
+                        </label>
+                </section>
 
-    <section className='section' id="p2">
-      <h3>¿Con qué frecuencia te has sentido nervioso o estresado?</h3>
-      <label> 
-          <input type="radio" value="1" id="p2.1" name="option"/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p2.2" name="option"/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p2.3" name="option"/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p2.4" name="option"/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p2.5" name="option"/> Muy a menudo
-      </label>
-    </section>
+                <section className='section' id="p2">
+                    <h3>¿Con qué frecuencia te has sentido nervioso o estresado?</h3>
+                        <label> 
+                            <input type="radio" value="Nunca" id="p2.1" name="optionp2"/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p2.2" name="optionp2"/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p2.3" name="optionp2"/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p2.4" name="optionp2"/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="Muyamenudo" id="p2.5" name="optionp2"/> Muy a menudo
+                        </label>
+                </section>
 
-    <section className='section' id="p3">
-      <h3>¿Con qué frecuencia te has sentido seguro de tu capacidad para manejar tus problemas personales?</h3>
-      <label>
-          <input type="radio" value="1" id="p3.1" name="option"/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p3.2" name="option"/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p3.3" name="option"/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p3.4" name="option"/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p3.5" name="option"/> Muy a menudo
-      </label>
-    </section>
+                <section className='section' id="p3">
+                    <h3>¿Con qué frecuencia te has sentido seguro de tu capacidad para manejar tus problemas personales?</h3>
+                        <label>
+                            <input type="radio" value="Nunca" id="p3.1" name="optionp3"/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p3.2" name="optionp3"/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p3.3" name="optionp3"/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p3.4" name="optionp3"/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="Muyamenudo" id="p3.5" name="optionp3"/> Muy a menudo
+                        </label>
+                </section>
 
-    <section className='section' id="p4">
-      <h3>¿Con qué frecuencia has sentido que las cosas van bien?</h3>
-      <label>
-          <input type="radio" value="1" id="p4.1" name="option"/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p4.2" name="option"/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p4.3" name='option'/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p4.4" name='option'/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p4.5" name='option'/> Muy a menudo
-      </label>
-    </section>
+                <section className='section' id="p4">
+                    <h3>¿Con qué frecuencia has sentido que las cosas van bien?</h3>
+                        <label>
+                            <input type="radio" value="Nunca" id="p4.1" name="optionp4"/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p4.2" name="optionp4"/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p4.3" name='optionp4'/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p4.4" name='optionp4'/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="Muyamenudo" id="p4.5" name='optionp4'/> Muy a menudo
+                        </label>
+                </section>
 
-    <section className='section' id="p5">
-      <h3>¿Con qué frecuencia sientes que no puedes afrontar todas las cosas que tienes que hacer?</h3>
-      <label>
-          <input type="radio" value="1" id="p5.1" name='option'/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p5.2" name='option'/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p5.3" name='option'/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p5.4" name='option'/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p5.5" name='option'/> Muy a menudo
-      </label>
-    </section>
+                <section className='section' id="p5">
+                    <h3>¿Con qué frecuencia sientes que no puedes afrontar todas las cosas que tienes que hacer?</h3>
+                        <label>
+                            <input type="radio" value="Nunca" id="p5.1" name='optionp5'/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p5.2" name='optionp5'/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p5.3" name='optionp5'/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p5.4" name='optionp5'/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="Muyamenudo" id="p5.5" name='optionp5'/> Muy a menudo
+                        </label>
+                </section>
 
-    <section className='section' id="p6">
-      <h3>¿Con qué frecuencia puedes controlar las dificultades de tu vida?</h3>
-      <label>
-          <input type="radio" value="1" id="p6.1" name='option'/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p6.2" name='option'/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p6.3" name='option'/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p6.4" name='option'/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p6.5" name='option'/> Muy a menudo
-      </label>
-    </section>
+                <section className='section' id="p6">
+                    <h3>¿Con qué frecuencia puedes controlar las dificultades de tu vida?</h3>
+                        <label>
+                            <input type="radio" value="Nunca" id="p6.1" name='optionp6'/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p6.2" name='optionp6'/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p6.3" name='optionp6'/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p6.4" name='optionp6'/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="Muyamenudo" id="p6.5" name='optionp6'/> Muy a menudo
+                        </label>
+                </section>
 
-    <section className='section' id="p7">
-      <h3>¿Con qué frecuencia sientes que tienes todo bajo control?</h3>
-      <label>
-          <input type="radio" value="1" id="p7.1" name='option'/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p7.2" name='option'/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p7.3" name='option'/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p7.4" name='option'/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p7.5" name='option'/> Muy a menudo
-      </label>
-    </section>
+                <section className='section' id="p7">
+                    <h3>¿Con qué frecuencia sientes que tienes todo bajo control?</h3>
+                        <label>
+                            <input type="radio" value="Nunca" id="p7.1" name='optionp7'/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p7.2" name='optionp7'/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p7.3" name='optionp7'/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p7.4" name='optionp7'/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="5" id="p7.5" name='optionp7'/> Muy a menudo
+                        </label>
+                </section>
 
-    <section className='section' id="p8">
-      <h3>¿Con qué frecuencia te enfadas porque las cosas que te ocurren están fuera de tu control?</h3>
-      <label>
-          <input type="radio" value="1" id="p8.1" name='option'/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p8.2" name='option'/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p8.3" name='option'/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p8.4" name='option'/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p8.5" name='option'/> Muy a menudo
-      </label>
-    </section>
+                <section className='section' id="p8">
+                    <h3>¿Con qué frecuencia te enfadas porque las cosas que te ocurren están fuera de tu control?</h3>
+                        <label>
+                            <input type="radio" value="Nunca" id="p8.1" name='optionp8'/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p8.2" name='optionp8'/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p8.3" name='optionp8'/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p8.4" name='optionp8'/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="Muyamenudo" id="p8.5" name='optionp8'/> Muy a menudo
+                        </label>
+                </section>
 
-    <section className='section' id="p9">
-      <h3>¿Con qué frecuencia sientes que las dificultades se te acumulan tanto que no puedes superarlas?</h3>
-      <label>
-          <input type="radio" value="1" id="p9.1" name='option'/> Nunca
-      </label>
-      <label>
-          <input type="radio" value="2" id="p9.2" name='option'/> Casi nunca
-      </label>
-      <label>
-          <input type="radio" value="3" id="p9.3" name='option'/> De vez en cuando
-      </label>
-      <label>
-          <input type="radio" value="4" id="p9.4" name='option'/> A menudo
-      </label>
-      <label>
-          <input type="radio" value="5" id="p9.5" name='option'/> Muy a menudo
-      </label>
-    </section>
-    <Link to='/Results/'>
-                <button type='submit'  className='button'>Enviar</button>
-    </Link>
-  </div>
+                <section className='section' id="p9">
+                    <h3>¿Con qué frecuencia sientes que las dificultades se te acumulan tanto que no puedes superarlas?</h3>
+                        <label>
+                            <input type="radio" value="Nunca" id="p9.1" name='optionp9'/> Nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Casinunca" id="p9.2" name='optionp9'/> Casi nunca
+                        </label>
+                        <label>
+                            <input type="radio" value="Devezencuando" id="p9.3" name='optionp9'/> De vez en cuando
+                        </label>
+                        <label>
+                            <input type="radio" value="Amenudo" id="p9.4" name='optionp9'/> A menudo
+                        </label>
+                        <label>
+                            <input type="radio" value="Muyamenudo" id="p9.5" name='optionp9'/> Muy a menudo
+                        </label>
+                </section>
+   
+                <button type='submit'  className='button' onClick={redirect}>Enviar</button>
+   
+  </form>
     </div>
     
   )
